@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="16dp">
+
+<!-- Subject Label -->
+<TextView
+    android:id="@+id/subjectLabel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Subject:"
+    android:textColor="#444444"
+    android:fontFamily="sans-serif-medium"
+    android:textStyle="bold"
+    android:textSize="16sp"
+    android:layout_marginTop="24dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"/>
+
+<!-- Subject Input -->
+<EditText
+    android:id="@+id/subjectInput"
+    android:layout_width="0dp"
+    android:layout_height="50dp"
+    android:hint="Enter Subject"
+    app:layout_constraintBaseline_toBaselineOf="@id/subjectLabel"
+    app:layout_constraintStart_toEndOf="@id/subjectLabel"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:textColor="#121212"
+    android:textColorHint="#666666"
+    android:radius="12dp"
+    android:width="1dp"
+    android:background="@drawable/rounded_edittext"
+    android:layout_marginStart="8dp"/>
+
+<!-- Date Label -->
+
+    <!-- Date Picker Button -->
+
+    <!-- Selected Date TextView -->
+    <TextView
+        android:id="@+id/dateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Exam Date:"
+        android:textColor="#444444"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subjectLabel" />
+
+    <Button
+        android:id="@+id/datePickerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Select Date"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FB8C00"
+        app:layout_constraintBaseline_toBaselineOf="@id/dateLabel"
+        app:layout_constraintStart_toEndOf="@id/dateLabel" />
+
+    <TextView
+    android:id="@+id/selectedDateTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="No date selected"
+        android:textColor="#444444"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="bold"
+    app:layout_constraintTop_toBottomOf="@id/datePickerButton"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginTop="8dp"/>
+
+<!-- Add Exam Button -->
+<Button
+    android:id="@+id/addExamButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Add Exam"
+    app:layout_constraintTop_toBottomOf="@id/selectedDateTextView"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:textColor="#FFFFFF"
+    android:backgroundTint="#FB8C00"
+    android:layout_marginTop="24dp"/>
+
+<!-- Progress Label -->
+<TextView
+    android:id="@+id/progressText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Preparation Progress:"
+    android:textSize="16sp"
+    android:textColor="#444444"
+    android:fontFamily="sans-serif-medium"
+    android:textStyle="bold"
+    app:layout_constraintTop_toBottomOf="@id/addExamButton"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginTop="16dp"/>
+
+<!-- Progress Bar -->
+<ProgressBar
+    android:id="@+id/preparationProgressBar"
+    style="@android:style/Widget.ProgressBar.Horizontal"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:max="100"
+    android:progress="0"
+    app:layout_constraintTop_toBottomOf="@id/progressText"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="8dp"/>
+
+<!-- RecyclerView -->
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/examsRecyclerView"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintTop_toBottomOf="@id/preparationProgressBar"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

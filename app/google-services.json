@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "52013307067",
+    "project_id": "smart-student-planner-228bc",
+    "storage_bucket": "smart-student-planner-228bc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52013307067:android:e78fbe603549af63b3859e",
+        "android_client_info": {
+          "package_name": "com.example.practiceproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXGbDCFD3dE0d_EIwCnM-848-cWCMjiTs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

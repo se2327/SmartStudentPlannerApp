@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:angle="45"
+    android:startColor="#E3F2FD"
+    android:endColor="#BBDEFB"
+    android:type="linear"
+    >
+
+    <!-- Intro Heading -->
+    <TextView
+        android:id="@+id/introText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="👤 My Profile"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Name -->
+    <TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:textStyle="bold"
+        android:textColor="#444444"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toBottomOf="@id/introText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Phone -->
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:hint="Your Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/nameLabel"
+        app:layout_constraintTop_toTopOf="@id/nameLabel"
+        android:textColor="#121212"
+        android:textColorHint="#666666"
+        android:radius="12dp"
+     android:width="1dp"
+        android:background="@drawable/rounded_edittext"
+        android:padding="12dp"
+        />
+
+    <TextView
+        android:id="@+id/phoneLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone:"
+        android:textStyle="bold"
+        android:textColor="#444444"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toBottomOf="@id/nameInput"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/phoneInput"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Your Phone Number"
+        android:inputType="phone"
+        android:textColor="#121212"
+        android:textColorHint="#666666"
+        app:layout_constraintStart_toEndOf="@id/phoneLabel"
+        app:layout_constraintTop_toTopOf="@id/phoneLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:padding="12dp"
+        />
+
+    <!-- Email -->
+    <TextView
+        android:id="@+id/emailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:textStyle="bold"
+        android:textColor="#444444"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toBottomOf="@id/phoneInput"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Your Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#121212"
+        android:textColorHint="#666666"
+        app:layout_constraintStart_toEndOf="@id/emailLabel"
+        app:layout_constraintTop_toTopOf="@id/emailLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/rounded_edittext"
+        android:padding="12dp"
+        android:layout_marginStart="16dp"/>
+
+    <!-- College Name -->
+    <TextView
+        android:id="@+id/collegeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="College:"
+        android:textStyle="bold"
+        android:textColor="#444444"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toBottomOf="@id/emailInput"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+
+    <!-- Social Profiles Heading -->
+    <EditText
+        android:id="@+id/collegeInput"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Your College/School"
+        android:padding="12dp"
+        android:textColor="#121212"
+        android:textColorHint="#666666"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/collegeLabel"
+        app:layout_constraintTop_toTopOf="@id/collegeLabel" />
+
+    <TextView
+        android:id="@+id/socialHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔗 Social Profiles"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/collegeInput"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <!-- GitHub Row -->
+    <LinearLayout
+        android:id="@+id/githubRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/socialHeading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp">
+
+        <ImageButton
+            android:id="@+id/githubIcon"
+            android:layout_width="71dp"
+            android:layout_height="84dp"
+            android:background="@null"
+            android:contentDescription="GitHub"
+            android:elevation="6dp"
+            android:backgroundTint="@null"
+        android:scaleType="centerInside"
+            android:src="@drawable/ic_github" />
+
+        <EditText
+            android:id="@+id/githubInput"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:hint="GitHub URL"
+            android:inputType="textUri"
+            android:textColor="#121212"
+            android:textColorHint="#666666"
+            android:layout_marginStart="12dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <!-- LinkedIn Row -->
+    <LinearLayout
+        android:id="@+id/linkedinRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/githubRow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp">
+
+        <ImageButton
+            android:id="@+id/linkedinIcon"
+            android:layout_width="68dp"
+            android:layout_height="75dp"
+            android:background="@null"
+            android:contentDescription="LinkedIn"
+            android:elevation="6dp"
+            android:backgroundTint="@null"
+        android:scaleType="centerInside"
+            android:src="@drawable/ic_linkedin" />
+
+        <EditText
+            android:id="@+id/linkedinInput"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:hint="LinkedIn URL"
+            android:inputType="textUri"
+            android:layout_marginStart="12dp"
+            android:textColor="#121212"
+            android:textColorHint="#666666"
+            android:layout_gravity="center_vertical"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext"
+
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <!-- Bio Label -->
+    <TextView
+        android:id="@+id/bioLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bio:"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/linkedinRow"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <EditText
+        android:id="@+id/bioInput"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:hint="Write about yourself"
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+    android:textColor="#121212"
+        android:textColorHint="	#666666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bioLabel"
+        android:background="@drawable/rounded_edittext"
+        android:padding="12dp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/saveProfileButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Save Profile"
+        android:layout_marginTop="24dp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FB8C00"
+        app:layout_constraintTop_toBottomOf="@id/bioInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
